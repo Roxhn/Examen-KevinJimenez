@@ -1,0 +1,29 @@
+<br/>
+<body style="background-color: #1d2124;color: whitesmoke;">
+<center>
+  <div class="container">
+    <div class="well well-lg">
+      <strong>Nombre:</strong>
+      <%= @constelacion.Nombre %>
+    </div>
+
+    <div class="well well-lg">
+      <strong>Coordenadaa:</strong>
+      <%= @constelacion.CoordenadaA %>
+    </div>
+
+    <div class="well well-lg">
+      <strong>Coordenadab:</strong>
+      <%= @constelacion.CoordenadaB %>
+    </div>
+
+    <div class="well well-lg">
+      <strong>Estado:</strong>
+      <%= @constelacion.Estado %>
+    </div>
+  </div>
+
+  <%= link_to 'Edit', edit_constelacion_path(@constelacion) %> |
+  <%= link_to 'Back', constelacions_path %>
+</center>
+</body>

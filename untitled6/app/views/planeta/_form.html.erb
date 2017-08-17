@@ -1,0 +1,37 @@
+<%= form_for(@planetum) do |f| %>
+  <% if @planetum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@planetum.errors.count, "error") %> prohibited this planetum from being saved:</h2>
+
+      <ul>
+      <% @planetum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :coordenadaa %><br>
+    <%= f.text_field :coordenadaa %>
+  </div>
+  <div class="field">
+    <%= f.label :coordenadab %><br>
+    <%= f.text_field :coordenadab %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :sistema %><br>
+    <%= f.text_field :sistema %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

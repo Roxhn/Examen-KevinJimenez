@@ -1,0 +1,35 @@
+<br/>
+<body style="background-color: #1d2124;color: whitesmoke;">
+<center>
+<div class="row">
+  <div class="col-sm-12">
+    <p>
+      <strong>Nombre:</strong>
+      <%= @sistema.nombre %>
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <p>
+      <strong>Coordeanadaa:</strong>
+      <%= @sistema.coordeanadaa %>
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <p>
+      <strong>Estado:</strong>
+      <%= @sistema.estado %>
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <p>
+      <strong>Coordenadab:</strong>
+      <%= @sistema.coordenadab %>
+    </p>
+  </div>
+
+</div>
+
+<%= link_to 'Edit', edit_sistema_path(@sistema) %> |
+<%= link_to 'Back', sistemas_path %>
+</center>
+</body>

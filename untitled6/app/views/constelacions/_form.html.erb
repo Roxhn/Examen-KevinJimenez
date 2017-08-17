@@ -1,0 +1,33 @@
+<%= form_for(@constelacion) do |f| %>
+  <% if @constelacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@constelacion.errors.count, "error") %> prohibited this constelacion from being saved:</h2>
+
+      <ul>
+      <% @constelacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :Nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :CoordenadaA %><br>
+    <%= f.text_field :CoordenadaA %>
+  </div>
+  <div class="field">
+    <%= f.label :CoordenadaB %><br>
+    <%= f.text_field :CoordenadaB %>
+  </div>
+  <div class="field">
+    <%= f.label :Estado %><br>
+    <%= f.text_field :Estado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

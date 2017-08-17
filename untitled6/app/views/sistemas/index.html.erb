@@ -1,0 +1,43 @@
+
+
+
+
+<!--<p id="notice"><%= notice %></p>-->
+<div class="jumbotron" style="background-image: url(https://orion-uploads.openroadmedia.com/lg_fb99f9d7caad-lavaplanet.jpg);background-repeat: no-repeat;background-size: cover;color: white;">
+  <div class="container">
+    <center><h1>Sistemas Planetarios</h1></center>
+    <p style="text-align: justify"> Un <strong>SISTEMA PLANETARIO</strong> (también llamado en ocasiones sistema solar) está formado por una estrella central o varias (sistema estelar), y distintos objetos orbitando a su alrededor. Nuestro sistema planetario, el sistema solar, está formado por el Sol, los diferentes planetas y una multitud de cuerpos menores. Se conocen más de 2500 estrellas a cuyo alrededor orbita por lo menos un planeta.<br/>Algunos sistemas planetarios son muy distintos del nuestro, como los sistemas de planetas alrededor de púlsares detectados a partir de las ligeras variaciones en los pulsos de radiación electromagnética de estos cuerpos. Los púlsares se forman en violentas explosiones de supernovas por lo que un sistema planetario convencional no podría sobrevivir a dicha explosión, los planetas se evaporarían o escaparían de la atracción gravitacional de la estrella central.</p>
+    <p><a class="btn btn-primary btn-lg" href="sistemas/new" role="button">Añadir Nuevo</a></p>
+  </div>
+</div>
+<body style="background-color: #1d2124">
+<div class="col-md-12">
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Coordeanada A</th>
+      <th>Coordenada B</th>
+      <th>Estado</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @sistemas.each do |sistema| %>
+        <tr>
+          <td><%= sistema.nombre %></td>
+          <td><%= sistema.coordeanadaa %></td>
+          <td><%= sistema.coordenadab %></td>
+          <td><%= sistema.estado %></td>
+          <td><%= link_to 'Show', sistema %></td>
+          <td><%= link_to 'Edit', edit_sistema_path(sistema) %></td>
+          <td><%= link_to 'Destroy', sistema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<a class="btn btn-info pull-right" href="indices/" role="button">««Volver al Inicio</a>

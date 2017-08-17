@@ -1,0 +1,43 @@
+<div class="jumbotron" style="background-image: url(http://www.eluniversohoy.com/wp-content/uploads/2015/01/EcNEcNEfrac34Efrac12Efrac34Esup2Ed-ENEpEfrac34Esup2N-_17A6312-1200_1421243548.jpg);background-repeat: no-repeat;background-size: cover;color: white;">
+  <div class="container">
+    <center><h1>Constelaciones</h1></center>
+    <p style="text-align: justify">Una <strong>CONSTELACION</strong>, en astronomía, es una agrupación convencional de estrellas, cuya posición en el cielo nocturno es aparentemente invariable. Los pueblos, generalmente de civilizaciones antiguas, decidieron vincularlas mediante trazos imaginarios, creando así siluetas virtuales sobre la esfera celeste. En la inmensidad del espacio, en cambio, las estrellas de una constelación no necesariamente están localmente asociadas; y pueden encontrarse a cientos de años luz unas de otras. Además, dichos grupos son completamente arbitrarios, ya que distintas culturas han ideado constelaciones diferentes, incluso vinculando las mismas estrellas.</p>
+    <p><a class="btn btn-primary btn-lg" href="constelacions/new" role="button">Añadir Nuevo</a></p>
+  </div>
+</div>
+<body style="background-color: #1d2124">
+<div class="col-md-12">
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Coordenada A</th>
+      <th>Coordenada B</th>
+      <th>Estado</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @constelacions.each do |constelacion| %>
+      <tr>
+        <td><%= constelacion.Nombre %></td>
+        <td><%= constelacion.CoordenadaA %></td>
+        <td><%= constelacion.CoordenadaB %></td>
+        <td><%= constelacion.Estado %></td>
+        <td><%= link_to  'Show', constelacion  %></td>
+        <td><%= link_to  'Editar', edit_constelacion_path(constelacion) %></td>
+        <td><%= link_to  'Eliminar', constelacion, method: :delete, data: { confirm: 'Está seguro de eliminar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<a class="btn btn-info pull-right" href="indices/" role="button">««Volver al Inicio</a>
+
+<!--
+<%= link_to 'New Constelacion', new_constelacion_path %>
+-->
+</body>

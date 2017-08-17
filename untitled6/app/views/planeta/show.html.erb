@@ -1,0 +1,42 @@
+<br/>
+<body style="background-color: #1d2124;color: whitesmoke;">
+<center>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>
+        <strong>Nombre:</strong>
+        <%= @planetum.nombre %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <strong>Coordenadaa:</strong>
+        <%= @planetum.coordenadaa %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <strong>Estado:</strong>
+        <%= @planetum.estado %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <strong>Coordenadab:</strong>
+        <%= @planetum.coordenadab %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <strong>Sistema:</strong>
+        <%= @planetum.sistema %>
+      </p>
+    </div>
+
+
+  </div>
+
+  <%= link_to 'Edit', edit_planetum_path(@planetum) %> |
+  <%= link_to 'Back', planeta_path %>
+</center>
+</body>

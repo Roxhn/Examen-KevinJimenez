@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Nombre: MyString
+  CoordenadaA: 1.5
+  CoordenadaB: 1.5
+  Estado: 
+
+two:
+  Nombre: MyString
+  CoordenadaA: 1.5
+  CoordenadaB: 1.5
+  Estado: 

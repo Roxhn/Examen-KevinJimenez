@@ -1,0 +1,40 @@
+<div class="jumbotron" style="background-image: url(https://i.ytimg.com/vi/1Md5DsAyVxw/maxresdefault.jpg);background-repeat: no-repeat;background-size: cover;color: white;">
+  <div class="container">
+    <center><h1>Planetas</h1></center>
+    <p style="text-align: justify">Un <strong>PLANETA</strong>, hace referencia a un elemento sólido celeste que, según aquellos que lo descubren y analizan, gira en torno a una determinada estrella y refleja luces que permiten observarlo. <br/>El término planeta existe desde hace miles de años, no solo en ciencia sino como parte de una cultura más amplia, aplicado en su larga historia a todo tipo de cosas, desde la videncia al ecologismo. Que el sistema solar consta del Sol y ocho planetas es algo muy conocido y repetido. Según fuentes enciclopédicas en general un planeta es un astro que no emite luz propia como las estrellas y tiene masa para que su gravedad supere las fuerzas del cuerpo rígido, de manera que asuma en equilibrio orbital e hidrostático una forma como prácticamente esférica</p>
+    <p><a class="btn btn-primary btn-lg" href="planeta/new" role="button">Añadir Nuevo</a></p>
+  </div>
+</div>
+<body style="background-color: #1d2124">
+<div class="col-md-12">
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Coordenada A</th>
+      <th>Coordenada B</th>
+      <th>Estado</th>
+      <th>Sistema</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @planeta.each do |planetum| %>
+        <tr>
+          <td><%= planetum.nombre %></td>
+          <td><%= planetum.coordenadaa %></td>
+          <td><%= planetum.coordenadab %></td>
+          <td><%= planetum.estado %></td>
+          <td><%= planetum.sistema %></td>
+          <td><%= link_to 'Show', planetum %></td>
+          <td><%= link_to 'Edit', edit_planetum_path(planetum) %></td>
+          <td><%= link_to 'Destroy', planetum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>
+<a class="btn btn-info pull-right" href="indices/" role="button">««Volver al Inicio</a>
